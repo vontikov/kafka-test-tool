@@ -107,7 +107,6 @@ func topics(ctx context.Context) http.Handler {
 		kw := kafka.NewWriter(kafka.WriterConfig{
 			Brokers: []string{*kafkaBootstrapFlag},
 			Topic:   topic,
-			Logger:  logger,
 		})
 		defer kw.Close()
 
